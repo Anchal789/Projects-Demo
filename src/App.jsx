@@ -1,11 +1,22 @@
+import { Link } from "react-router-dom";
+import "./App.css"
+import { useEffect } from "react";
+import Button from '@mui/material/Button';
+
 function App() {
   const imageStyle = {
     aspectRatio: "400 / 300",
     objectFit: "cover",
   };
 
+  useEffect(()=>{
+    window.addEventListener("load", () => {
+      alert("This is working ")
+    })
+  },[])
+
   return (
-    <div className="flex flex-col min-h-dvh">
+    <div className="flex flex-col min-h-dvh w-full">
       <header className="bg-[#024950] text-white py-6 px-4 md:px-6">
         <div className="container mx-auto flex items-center justify-between">
           <a className="flex items-center gap-2" href="#">
@@ -23,18 +34,18 @@ function App() {
             >
               <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
             </svg>
-            <span className="text-xl font-bold">Assignment Management</span>
+            <span className="text-xl font-bold">Project Images</span>
           </a>
-          <nav className="hidden md:flex gap-4">
-            <a className="hover:bg-[#ffffff] hover:text-black hover:rounded-full font-bold rounded-full p-3 transition-all duration-300" href="#">
+          <nav className="hidden md:flex gap-4 mr-6">
+            <Link className="hover:bg-[#ffffff] p-2 hover:text-black hover:rounded-full font-bold rounded-full transition-all duration-300">
               Admin
-            </a>
-            <a className="hover:underline" href="#">
+            </Link>
+            <Link className="hover:bg-[#ffffff] p-2 hover:text-black hover:rounded-full font-bold rounded-full transition-all duration-300">
               Faculty
-            </a>
-            <a className="hover:underline" href="#">
+            </Link>
+            <Link className="hover:bg-[#ffffff] p-2 hover:text-black hover:rounded-full font-bold rounded-full transition-all duration-300">
               Student
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
@@ -42,7 +53,7 @@ function App() {
         <section className="py-12 md:py-24 lg:py-32 bg-[#024950] text-white">
           <div className="container mx-auto px-4 md:px-6 text-center space-y-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Assignment Management Sy
+              Assignment Management System
             </h1>
             <p className="max-w-[700px] mx-auto text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Our Assignment Managemen
@@ -190,10 +201,13 @@ function App() {
                   className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
                   style={imageStyle}
                 />
-                <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <h3 className="text-white text-2xl font-bold">
+                <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 flex-col">
+                  <h3 className="text-white text-2xl font-bold mb-4">
                     View Assignments
                   </h3>
+                  <h5 className="text-white text-lg font-bold">
+                    List of all available assignments
+                  </h5>
                 </div>
               </div>
               <div className="relative group overflow-hidden rounded-lg shadow-lg">
@@ -205,10 +219,13 @@ function App() {
                   className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
                   style={imageStyle}
                 />
-                <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <h3 className="text-white text-2xl font-bold">
+                <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 flex-col">
+                  <h3 className="text-white text-2xl font-bold mb-4">
                     Submit Assignments
                   </h3>
+                  <h5 className="text-white text-lg font-bold">
+                    Upload and submit assignments
+                  </h5>
                 </div>
               </div>
               <div className="relative group overflow-hidden rounded-lg shadow-lg">
@@ -220,8 +237,13 @@ function App() {
                   style={imageStyle}
                   className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <h3 className="text-white text-2xl font-bold">Vie</h3>
+                <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 flex-col">
+                  <h3 className="text-white text-2xl font-bold mb-4">
+                    Track Progress
+                  </h3>
+                  <h5 className="text-white text-lg font-bold">
+                    View submission status, feedback, and grades
+                  </h5>
                 </div>
               </div>
             </div>
@@ -229,18 +251,18 @@ function App() {
         </section>
       </main>
       <footer className="bg-[#024950] text-white py-6 px-4 md:px-6">
-        <div className="container mx-auto flex items-center justify-between">
-          <p className="text-sm">© 2024 Assignment Management</p>
-          <nav class="flex gap-4" data-id="71">
-            <a data-id="72" className="hover:underline" href="#">
+        <div className="container mx-auto flex items-center justify-between flex-row sm:flex-col">
+          <p className="text-sm">© 2024 Anchal Deshmukh</p>
+          <nav className="flex gap-4 flex-row sm:flex-col" data-id="71">
+            <Link className="hover:bg-[#ffffff] hover:text-black hover:rounded-full font-bold rounded-full transition-all duration-300">
               Terms of Service
-            </a>
-            <a data-id="73" className="hover:underline" href="#">
+            </Link>
+            <Link className="hover:bg-[#ffffff] hover:text-black hover:rounded-full font-bold rounded-full transition-all duration-300">
               Privacy Policy
-            </a>
-            <a data-id="74" className="hover:underline" href="#">
+            </Link>
+            <Link className="hover:bg-[#ffffff] hover:text-black hover:rounded-full font-bold rounded-full transition-all duration-300">
               Contact Us
-            </a>
+            </Link>
           </nav>
         </div>
       </footer>
