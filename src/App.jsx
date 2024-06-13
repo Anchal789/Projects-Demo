@@ -1,17 +1,7 @@
-import React, { useState, forwardRef, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import Slide from "@mui/material/Slide";
-
-const Transition = forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
+import DialogBox from "./DialogBox";
 
 function App() {
   const imageStyle = {
@@ -19,55 +9,12 @@ function App() {
     objectFit: "cover",
   };
 
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      setOpen(true);
-    });
-  }, []);
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   return (
     <div className="flex flex-col min-h-dvh w-full">
-      <React.Fragment>
-        <Dialog
-          open={open}
-          TransitionComponent={Transition}
-          keepMounted
-          onClose={handleClose}
-          aria-describedby="alert-dialog-slide-description"
-        >
-          <h1 className="text-3xl font-bold p-3 flex justify-center">
-            Important Message
-          </h1>
-          <DialogTitle className="flex justify-center">
-            {"Welcome to the Assignment Management System Demo"}
-          </DialogTitle>
-          <DialogContent>
-            <DialogContentText id="alert-dialog-slide-description">
-              Please note that this website is a demonstration only and not the
-              original system currently in use by Baba Institute of Technology
-              and Science. Due to privacy and security concerns, we cannot
-              provide access to the live system, which contains real user data.
-              Instead, this site showcases screenshots and descriptions to
-              illustrate the functionalities and workflow of the project. Thank
-              you for understanding.
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button variant="contained" color="success" onClick={handleClose}>
-              I Understand
-            </Button>
-          </DialogActions>
-        </Dialog>
-      </React.Fragment>
-      <header className="bg-[#024950] text-white py-6 px-4 md:px-6">
+      <DialogBox />
+      <header className="bg-[#024950] text-white py-6 px-4 md:px-6 ">
         <div className="container mx-auto flex items-center justify-between">
-          <a className="flex items-center gap-2" href="#">
+          <Link className="flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -83,7 +30,7 @@ function App() {
               <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
             </svg>
             <span className="text-xl font-bold">Project Images</span>
-          </a>
+          </Link>
           <nav className="hidden md:flex gap-4 mr-6">
             <Link className="hover:bg-[#ffffff] p-2 hover:text-black hover:rounded-full font-bold rounded-full transition-all duration-300">
               Admin
@@ -98,7 +45,7 @@ function App() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="py-12 md:py-24 lg:py-32 bg-[#024950] text-white">
+        <section className="py-12 md:py-24 lg:py-32 bg-[#024950] text-white ">
           <div className="container mx-auto px-4 md:px-6 text-center space-y-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Assignment Management System
