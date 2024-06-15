@@ -10,11 +10,11 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-dvh w-full">
+    <div className="flex flex-col min-h-dvh w-full animate-fade-down animate-once animate-duration-[2100ms]">
       <DialogBox />
-      <header className="bg-[#024950] text-white py-6 px-4 md:px-6 ">
+      <header className="bg-[#024950] text-white py-6 px-4 md:px-6  ">
         <div className="container mx-auto flex items-center justify-between">
-          <Link className="flex items-center gap-2">
+          <Link className="flex items-center gap-2 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -50,8 +50,10 @@ function App() {
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Assignment Management System
             </h1>
-            <p className="max-w-[700px] mx-auto text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Our Assignment Managemen
+            <p className="max-w-[80%] mx-auto text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Our Assignment Management System provides a comprehensive solution
+              for managing assignments across three portals: Admin, Faculty, and
+              Student.
             </p>
           </div>
         </section>
@@ -61,10 +63,14 @@ function App() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Admin Portal
               </h2>
-              <p className="max-w-[700px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                The Admin portal provides a centralized dashboard for managing
-                the entire assignment lifecycle, from creating assignments to
-                monitoring student progress.e Admin portal provi
+              <p className="max-w-[80%] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                The Admin Portal allows administrators (typically HODs) to
+                manage users and assignments. Admins can register faculty and
+                students, promote students to the next semester, add subjects to
+                specific semesters, and map subjects to faculty members. This
+                portal provides comprehensive control over the assignment
+                management process, ensuring efficient operation and data
+                organization within the system.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -125,10 +131,14 @@ function App() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
                 Faculty Portal
               </h2>
-              <p className="max-w-[700px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                The Faculty portal empowers instructors to create, manage, and
-                grade assignments, as well as provide feedback to students.he
-                Faculty po
+              <p className="max-w-[80%] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                The Faculty Portal enables faculty members to manage their
+                assigned subjects. They can create assignments, set deadlines,
+                and provide detailed descriptions. Faculty can also check
+                student submissions, evaluate and grade them, and provide
+                feedback. Additionally, the portal offers a student list view to
+                access student details, ensuring smooth assignment tracking and
+                evaluation.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -182,8 +192,14 @@ function App() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Student{" "}
               </h2>
-              <p className="max-w-[700px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                The Stu
+              <p className="max-w-[80%] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                The Student Portal allows students to view and manage their
+                assignments. Students can log in to see all subjects for their
+                semester, view active and inactive assignments, submit their
+                work, and check their submission status. The portal also enables
+                students to view feedback, marks, and remarks from faculty on
+                their submitted assignments, facilitating a clear and structured
+                workflow for their academic tasks.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -240,6 +256,58 @@ function App() {
                     View submission status, feedback, and grades
                   </h5>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="technologies" className="py-12 md:py-24 lg:py-32 bg-gray-100 ">
+          <div className="container mx-auto px-4 md:px-6 space-y-8">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Technologies Used</h2>
+              <p className="max-w-[700px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                The Assignment Management System is built using the following technologies:
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-2xl font-bold mb-4">Frontend</h3>
+                <ul className="space-y-2">
+                  <li>React</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Redux (with Redux Persist for state persistence)</li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-2xl font-bold mb-4">Database</h3>
+                <ul className="space-y-2">
+                  <li>Firebase Realtime Database</li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-2xl font-bold mb-4">Authentication</h3>
+                <ul className="space-y-2">
+                  <li>Firebase Authentication</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="deployment" className="py-12 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6 space-y-8">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Deployment</h2>
+              <p className="max-w-[700px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                The Assignment Management System is deployed on the following platform:
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-2xl font-bold mb-4">Hosting Platform</h3>
+                <ul className="space-y-2">
+                  <li>Netlify</li>
+                </ul>
               </div>
             </div>
           </div>
