@@ -9,7 +9,6 @@ import TechnologiesUsedSection from "./Sections/TechnologiesUsedSection";
 import DeploymentSection from "./Sections/DeploymentSection";
 import Footer from "./Sections/Footer";
 import StudentSection from "./Sections/StudentSection";
-import ScrollBottomToTop from "./Sections/ScrollBottomToTop";
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
         <StudentSection />
         <TechnologiesUsedSection />
         <DeploymentSection />
-        <ScrollBottomToTop/>
       </main>
       <Footer />
     </div>
