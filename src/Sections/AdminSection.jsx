@@ -8,83 +8,31 @@ import PromoteStudentImage from "../Assignment Management System/admin/Screensho
 import AddSubjectImage from "../Assignment Management System/admin/Screenshot 2024-05-01 223747.png";
 import MapSubjectImage from "../Assignment Management System/admin/Screenshot 2024-05-01 223802.png";
 import "../App.css";
+import { Dialog } from "@mui/material";
+
 
 const AdminSection = () => {
-  // const imageStyle = {
-  //   aspectRatio: "200 / 100",
-  //   objectFit: "contain",
-  // };
-
-  const [expandedImage, setExpandedImage] = useState(null);
+  const [expandedImage, setExpandedImage] = useState(false);
 
   const handleExpand = (imageSrc) => {
     setExpandedImage(imageSrc);
-    console.log(imageSrc);
-    document.body.style.overflow = "hidden"; // Disable scrolling on body
+    // document.body.style.overflow = "hidden"; // Disable background scrolling
   };
 
   const handleClose = () => {
-    setExpandedImage(null);
-    document.body.style.overflow = "auto"; // Disable scrolling on body
+    setExpandedImage(!expandedImage);
+    // document.body.style.overflow = "auto"; // Enable background scrolling
   };
 
   const images = [
-    {
-      id: 1,
-      src: SignupImage,
-      title: "Admin Sign Up",
-      dataSrc:
-        "../Assignment Management System/admin/Screenshot 2024-05-01 223427.png",
-    },
-    {
-      id: 2,
-      src: LoginImage,
-      title: "Admin Login",
-      dataSrc:
-        "../Assignment Management System/admin/Screenshot 2024-05-01 223512.png",
-    },
-    {
-      id: 3,
-      src: DashboardImage,
-      title: "Admin Dashboard",
-      dataSrc:
-        "../Assignment Management System/admin/Screenshot 2024-05-01 223532.png",
-    },
-    {
-      id: 4,
-      src: FacultySignupImage,
-      title: "Faculty Sign Up",
-      dataSrc:
-        "../Assignment Management System/admin/Screenshot 2024-05-01 223552.png",
-    },
-    {
-      id: 5,
-      src: StudentSignupImage,
-      title: "Student Sign Up",
-      dataSrc:
-        "../Assignment Management System/admin/Screenshot 2024-05-01 223628.png",
-    },
-    {
-      id: 6,
-      src: PromoteStudentImage,
-      title: "Promote Students",
-      dataSrc:
-        "../Assignment Management System/admin/Screenshot 2024-05-01 223652.png",
-    },
-    {
-      id: 7,
-      src: AddSubjectImage,
-      title: "Add Subjects",
-      dataSrc:
-        "../Assignment Management System/admin/Screenshot 2024-05-01 223747.png",
-    },
-    {
-      id: 8,
-      src: MapSubjectImage,
-      title: "Map Subjects",
-      dataSrc:
-        "../Assignment Management System/admin/Screenshot 2024-05-01 223802.png",
-    },
+    { id: 1, src: SignupImage, title: "Admin Sign Up" },
+    { id: 2, src: LoginImage, title: "Admin Login" },
+    { id: 3, src: DashboardImage, title: "Admin Dashboard" },
+    { id: 4, src: FacultySignupImage, title: "Faculty Sign Up" },
+    { id: 5, src: StudentSignupImage, title: "Student Sign Up" },
+    { id: 6, src: PromoteStudentImage, title: "Promote Students" },
+    { id: 7, src: AddSubjectImage, title: "Add Subjects" },
+    { id: 8, src: MapSubjectImage, title: "Map Subjects" },
   ];
 
   return (
@@ -115,12 +63,10 @@ const AdminSection = () => {
                 width="400"
                 height="300"
                 alt={image.title}
-                className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110 "
-                // style={imageStyle}
+                className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <h3 className="text-white text-2xl font-bold">{image.title}</h3>
-
                 <button
                   className="mt-2 px-4 py-2 bg-white text-[#5C0029] rounded-full"
                   onClick={() => handleExpand(image.src)}
@@ -129,16 +75,13 @@ const AdminSection = () => {
                 </button>
               </div>
               {expandedImage === image.src && (
-                <div
-                  className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75 flex items-center justify-center z-50 h-[100vh]"
-                  onClick={handleClose}
-                >
-                  <img
+                <Dialog onClose={handleClose} open={Boolean(expandedImage)} className="sectionsDialog">
+                   <img
                     src={expandedImage}
                     alt="Expanded view"
-                    className="max-w-[90vw] max-h-[90vh] object-contain fixed"
+                    className="w-[90vw] max-h-[90vh] object-contain"
                   />
-                </div>
+                </Dialog>
               )}
             </div>
           ))}
