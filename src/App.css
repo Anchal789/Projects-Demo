@@ -1,15 +1,23 @@
-/* body {
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-} */
+.scrollbar-custom::-webkit-scrollbar {
+    height: 3px; /* Change the height of the scrollbar */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: #000000; /* Change the background color of the scrollbar track */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #ae0000; /* Change the color of the scrollbar thumb */
+    border-radius: 10px; /* Add rounded corners to the scrollbar thumb */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change the color when hovering over the scrollbar thumb */
+    
+  }
+  
+  /* For Firefox */
+  .scrollbar-custom {
+    scrollbar-width: thin; /* Change the width of the scrollbar */
+    scrollbar-color: #d40000 #f1f1f1; /* thumb color, track color */
+  }
