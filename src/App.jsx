@@ -8,6 +8,7 @@ import FacultySection from "./Sections/FacultySection";
 import TechnologiesUsedSection from "./Sections/TechnologiesUsedSection";
 import DeploymentSection from "./Sections/DeploymentSection";
 import Footer from "./Sections/Footer";
+import StudentSection from "./Sections/StudentSection";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Introduction />
         <AdminSection />
         <FacultySection />
-
+        <StudentSection />
         <TechnologiesUsedSection />
         <DeploymentSection />
       </main>

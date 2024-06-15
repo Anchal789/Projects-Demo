@@ -1,4 +1,12 @@
 import React from "react";
+import SignupImage from "../Assignment Management System/admin/Screenshot 2024-05-01 223427.png"
+import LoginImage from "../Assignment Management System/admin/Screenshot 2024-05-01 223512.png"
+import DashboardImage from "../Assignment Management System/admin/Screenshot 2024-05-01 223532.png"
+import FacultySignupImage from "../Assignment Management System/admin/Screenshot 2024-05-01 223552.png"
+import StudentSignupImage from "../Assignment Management System/admin/Screenshot 2024-05-01 223628.png"
+import PromoteStudentImage from "../Assignment Management System/admin/Screenshot 2024-05-01 223652.png"
+import AddSubjectImage from "../Assignment Management System/admin/Screenshot 2024-05-01 223747.png"
+import MapSubjectImage from "../Assignment Management System/admin/Screenshot 2024-05-01 223802.png"
 
 const AdminSection = () => {
   const imageStyle = {
@@ -26,10 +34,38 @@ const AdminSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="relative group overflow-hidden rounded-lg shadow-lg">
             <img
-              src="/placeholder.svg"
+              src={SignupImage}
               width="400"
               height="300"
               alt="Admin Dashboard"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-white text-2xl font-bold">Admin Sign Up</h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={LoginImage}
+              width="400"
+              height="300"
+              alt="Admin Assignments"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-white text-2xl font-bold">
+                Admin Login
+              </h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={DashboardImage}
+              width="400"
+              height="300"
+              alt="Admin Students"
               className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
               style={imageStyle}
             />
@@ -39,22 +75,7 @@ const AdminSection = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg shadow-lg">
             <img
-              src="/placeholder.svg"
-              width="400"
-              height="300"
-              alt="Admin Assignments"
-              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
-              style={imageStyle}
-            />
-            <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <h3 className="text-white text-2xl font-bold">
-                Manage Assignments
-              </h3>
-            </div>
-          </div>
-          <div className="relative group overflow-hidden rounded-lg shadow-lg">
-            <img
-              src="/placeholder.svg"
+              src={FacultySignupImage}
               width="400"
               height="300"
               alt="Admin Students"
@@ -62,7 +83,59 @@ const AdminSection = () => {
               style={imageStyle}
             />
             <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <h3 className="text-white text-2xl font-bold">Manage Students</h3>
+              <h3 className="text-white text-2xl font-bold">Faculty Sign Up</h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={StudentSignupImage}
+              width="400"
+              height="300"
+              alt="Admin Students"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-white text-2xl font-bold">Student Sign Up</h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={PromoteStudentImage}
+              width="400"
+              height="300"
+              alt="Admin Students"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-white text-2xl font-bold">Promote Students</h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={AddSubjectImage}
+              width="400"
+              height="300"
+              alt="Admin Students"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-white text-2xl font-bold">Add Subjects</h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={MapSubjectImage}
+              width="400"
+              height="300"
+              alt="Admin Students"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-[#5C0029] bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-white text-2xl font-bold">Map Subjects</h3>
             </div>
           </div>
         </div>

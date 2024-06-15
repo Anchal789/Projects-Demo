@@ -1,6 +1,11 @@
 import React from "react";
 
 const StudentSection = () => {
+  const imageStyle = {
+    aspectRatio: "400 / 300",
+    objectFit: "cover",
+  };
+  
   return (
     <section id="student" className="py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6 space-y-8">

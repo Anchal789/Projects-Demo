@@ -1,4 +1,12 @@
 import React from "react";
+import FacultyLoginImage from "../Assignment Management System/faculty/Screenshot 2024-05-01 223830.png"
+import SubjectSelectionImage from "../Assignment Management System/faculty/Screenshot 2024-05-01 223906.png"
+import FacultyDashboardImage from "../Assignment Management System/faculty/Screenshot 2024-05-01 223915.png"
+import CreateAssignmentImage from "../Assignment Management System/faculty/Screenshot 2024-05-01 223931.png"
+import CheckAssignmentImage from "../Assignment Management System/faculty/Screenshot 2024-05-01 224001.png"
+import EvaluateAssignmentImage from "../Assignment Management System/faculty/Screenshot 2024-05-01 224036.png"
+import CloseAssignmentImage from "../Assignment Management System/faculty/Screenshot 2024-05-01 224055.png"
+import StudentListImage from "../Assignment Management System/faculty/Screenshot 2024-05-01 224122.png"
 
 const FacultySection = () => {
   const imageStyle = {
@@ -28,7 +36,7 @@ const FacultySection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="relative group overflow-hidden rounded-lg shadow-lg">
             <img
-              src="/placeholder.svg"
+              src={FacultyLoginImage}
               width="400"
               height="300"
               alt="Faculty Assignments"
@@ -37,13 +45,13 @@ const FacultySection = () => {
             />
             <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
               <h3 className="text-black text-2xl font-bold">
-                Manage Assignments
+                Faculty Login
               </h3>
             </div>
           </div>
           <div className="relative group overflow-hidden rounded-lg shadow-lg">
             <img
-              src="/placeholder.svg"
+              src={SubjectSelectionImage}
               width="400"
               height="300"
               alt="Faculty Grading"
@@ -51,12 +59,12 @@ const FacultySection = () => {
               style={imageStyle}
             />
             <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <h3 className="text-black text-2xl font-bold">Grade Assig</h3>
+              <h3 className="text-black text-2xl font-bold">Subject Selection</h3>
             </div>
           </div>
           <div className="relative group overflow-hidden rounded-lg shadow-lg">
             <img
-              src="/placeholder.svg"
+              src={FacultyDashboardImage}
               width="400"
               height="300"
               alt="Faculty Feedback"
@@ -64,7 +72,72 @@ const FacultySection = () => {
               style={imageStyle}
             />
             <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <h3 className="text-black text-2xl font-bold">Provide F</h3>
+              <h3 className="text-black text-2xl font-bold">Faculty Dashboard</h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={CreateAssignmentImage}
+              width="400"
+              height="300"
+              alt="Faculty Feedback"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-black text-2xl font-bold">Create Assignment</h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={CheckAssignmentImage}
+              width="400"
+              height="300"
+              alt="Faculty Feedback"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-black text-2xl font-bold">Check Assignment</h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={EvaluateAssignmentImage}
+              width="400"
+              height="300"
+              alt="Faculty Feedback"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-black text-2xl font-bold">Evaluate Assignment</h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={CloseAssignmentImage}
+              width="400"
+              height="300"
+              alt="Faculty Feedback"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-black text-2xl font-bold">Close Assignment</h3>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src={StudentListImage}
+              width="400"
+              height="300"
+              alt="Faculty Feedback"
+              className="w-full h-auto object-cover transition-all duration-300 group-hover:scale-110"
+              style={imageStyle}
+            />
+            <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-black text-2xl font-bold">Student List</h3>
             </div>
           </div>
         </div>
